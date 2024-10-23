@@ -7,6 +7,7 @@ import { Toaster } from "@components/ui/sonner";
 import "./globals.css";
 
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-        <ReactQueryProvider>{children}</ReactQueryProvider>
-
-        <Toaster />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+          <Toaster richColors />
+        </ThemeProvider>
       </body>
     </html>
   );
