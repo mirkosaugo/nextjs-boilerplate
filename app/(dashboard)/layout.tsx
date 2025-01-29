@@ -1,4 +1,4 @@
-import { Header } from "@components";
+import { Header } from "@components/shared";
 
 export default function DashBoardLayout({ children }: { children: React.ReactNode }) {
   return (
