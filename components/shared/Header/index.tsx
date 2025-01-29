@@ -20,7 +20,7 @@ const Header = () => {
       <div className="mx-auto max-w-screen-2xl">
         <div className="mb-14 flex w-full items-center justify-between">
           <div className="flex items-center lg:gap-x-16">
-            <Logo width={25} height={25} />
+            <Logo width={25} height={25} appName="Mirko" />
           </div>
           <div>
             <DropdownMenu>
