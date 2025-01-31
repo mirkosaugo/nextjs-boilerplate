@@ -1,11 +1,12 @@
+import { TWINS } from "@/constants/queryKeys";
 import { useQuery } from "@tanstack/react-query";
 
-export const useGetAccount = (id?: string) => {
+export const useGetTwin = (id?: string) => {
   const query = useQuery({
     enabled: !!id,
-    queryKey: ["accounts", { id }],
+    queryKey: [TWINS, { id }],
     queryFn: async () => {
-      // const response = await fetch(`/api/accounts/${id}`);
+      // const response = await fetch(`/api/twins/${id}`);
       // if (!response.ok) {
       //   throw new Error(response.statusText);
       // }

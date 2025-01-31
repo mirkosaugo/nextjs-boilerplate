@@ -1,16 +1,17 @@
+import { TWIN, TWINS } from "@/constants/queryKeys";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { toast } from "sonner";
 
-export const useEditAccount = (id?: string) => {
+export const useDeleteTwin = (id?: string) => {
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
-    mutationFn: async (json) => {},
+    mutationFn: async () => {},
     onSuccess: () => {
-      toast.success("Account edited successfully");
-      // queryClient.invalidateQueries({ queryKey: ["account", { id }] });
-      // queryClient.invalidateQueries({ queryKey: ["accounts"] });
+      toast.success("Account deleted successfully");
+      queryClient.invalidateQueries({ queryKey: [TWIN, { id }] });
+      queryClient.invalidateQueries({ queryKey: [TWINS] });
     },
     onError: (error) => {
       console.log(error);
