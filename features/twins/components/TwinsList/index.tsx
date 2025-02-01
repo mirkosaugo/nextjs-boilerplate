@@ -3,7 +3,7 @@ import { useGetTwins } from "@features/twins/api/useGetTwins";
 import { Button } from "@/components/ui/button";
 
 const TwinsList = () => {
-  const { data, isLoading, isError } = useGetTwins();
+  const { data = [], isLoading, isError } = useGetTwins();
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -12,8 +12,6 @@ const TwinsList = () => {
   if (isError) {
     return <div>Error</div>;
   }
-
-  console.log(data);
 
   return (
     <div className="grid grid-cols-3 gap-4">
