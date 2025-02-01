@@ -16,12 +16,10 @@ const Header = () => {
   const { setTheme } = useTheme();
 
   return (
-    <header className="bg-gradient-to-b from-blue-700 to-blue-500 px-4 py-8 pb-12 lg:px-14">
+    <header className="bg-primary px-4 py-8 pb-12 lg:px-14">
       <div className="mx-auto max-w-screen-2xl">
         <div className="mb-14 flex w-full items-center justify-between">
-          <div className="flex items-center lg:gap-x-16">
-            <Logo width={25} height={25} appName="Mirko" />
-          </div>
+          <div className="flex items-center text-purple-500 lg:gap-x-16">APP TEST</div>
           <div>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
