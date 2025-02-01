@@ -6,12 +6,17 @@ export const useGetTwin = (id?: string) => {
     enabled: !!id,
     queryKey: [TWINS, { id }],
     queryFn: async () => {
-      // const response = await fetch(`/api/twins/${id}`);
-      // if (!response.ok) {
-      //   throw new Error(response.statusText);
-      // }
-      // const { data } = await response.json();
-      // return data;
+      const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API}/api/gen-ai-twins/${id}`);
+
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      const { data } = await response.json();
+      console.log(data);
+      return {
+        id: data.id,
+        ...data.attributes,
+      };
     },
   });
 

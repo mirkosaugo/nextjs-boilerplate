@@ -18,8 +18,8 @@ export default function Home() {
       MAIN PAGE
       <br />
       <br />
-      <Link className={buttonVariants({ variant: "outline" })} href="/accounts">
-        Go to accounts page
+      <Link className={buttonVariants({ variant: "outline" })} href="/twins">
+        Go to twin page
       </Link>
       <br />
       <br />

@@ -17,10 +17,8 @@ const TwinsList = () => {
     <div className="grid grid-cols-3 gap-4">
       {data.map((twin: any) => (
         <div className="flex flex-col gap-2" key={twin.id}>
+          <span>{twin.id}</span>
           <h1>{twin.title}</h1>
-          <Button className="self-" variant="outline">
-            Edit
-          </Button>
         </div>
       ))}
     </div>
