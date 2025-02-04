@@ -1,6 +1,5 @@
 "use client";
 
-import { Logo } from "@components/shared";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
