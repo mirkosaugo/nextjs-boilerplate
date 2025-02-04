@@ -4,7 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 import Link from "next/link";
 
-import TwinsList from "@/features/twins/components/TwinsList";
+import TwinsList from "@/app/(home)/twins/components/TwinsList";
 import TwinEdit from "@/features/twins/components/TwinEdit";
 import { useGetTwins } from "@/features/twins/api/useGetTwins";
 import { use, useMemo, useState } from "react";
